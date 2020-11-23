@@ -1,10 +1,29 @@
+/* Core */
 import Vue from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
-import router from "./router";
-import store from "./store";
 import Buefy from "buefy";
-import "./assets/scss/app.scss";
+/* Router & Store */
+import router from "@/router";
+import store from "@/store";
+/* Vue. Main component */
+import App from "@/App.vue";
+/* Service Worker */
+import "./registerServiceWorker";
+/* Styles */
+import "@/assets/scss/main.scss";
+
+/* Default title tag */
+const defaultDocumentTitle = "Vue Bulma Admin";
+
+/* Collapse mobile aside menu on route change & set document title from route meta */
+router.afterEach(to => {
+  store.commit("asideMobileStateToggle", false);
+
+  if (to.meta && to.meta.title) {
+    document.title = `${to.meta.title} — ${defaultDocumentTitle}`;
+  } else {
+    document.title = defaultDocumentTitle;
+  }
+});
 
 Vue.use(Buefy);
 
