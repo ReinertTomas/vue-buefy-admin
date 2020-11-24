@@ -10,38 +10,38 @@
 
 <script>
 export default {
-  name: 'RadioPicker',
+  name: "RadioPicker",
   props: {
     options: {
       type: Object,
-      default: null
+      default: null,
     },
     type: {
       type: String,
-      default: null
+      default: null,
     },
     value: {
       type: [String, Number],
-      default: null
-    }
+      default: null,
+    },
   },
-  data () {
+  data() {
     return {
-      newValue: null
-    }
+      newValue: null,
+    };
   },
   watch: {
-    value (newValue) {
-      this.newValue = newValue
-    }
+    value(newValue) {
+      this.newValue = newValue;
+    },
   },
-  created () {
-    this.newValue = this.value
+  created() {
+    this.newValue = this.value;
   },
   methods: {
-    input () {
-      this.$emit('input', this.newValue)
-    }
-  }
-}
+    input() {
+      this.$emit("input", this.newValue);
+    },
+  },
+};
 </script>

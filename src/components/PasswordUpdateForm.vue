@@ -54,36 +54,36 @@
 </template>
 
 <script>
-import CardComponent from '@/components/CardComponent'
+import CardComponent from "@/components/CardComponent";
 export default {
-  name: 'PasswordUpdateForm',
+  name: "PasswordUpdateForm",
   components: {
-    CardComponent
+    CardComponent,
   },
-  data () {
+  data() {
     return {
       isLoading: false,
       form: {
         password_current: null,
         password: null,
-        password_confirmation: null
-      }
-    }
+        password_confirmation: null,
+      },
+    };
   },
   methods: {
-    submit () {
-      this.isLoading = true
+    submit() {
+      this.isLoading = true;
       setTimeout(() => {
-        this.isLoading = false
+        this.isLoading = false;
         this.$buefy.snackbar.open(
           {
-            message: 'Updated',
-            queue: false
+            message: "Updated",
+            queue: false,
           },
           500
-        )
-      })
-    }
-  }
-}
+        );
+      });
+    },
+  },
+};
 </script>

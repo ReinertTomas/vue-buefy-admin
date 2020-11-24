@@ -17,20 +17,20 @@
 
 <script>
 export default {
-  name: 'Notification',
-  data () {
+  name: "Notification",
+  data() {
     return {
-      isDismissed: false
-    }
+      isDismissed: false,
+    };
   },
   methods: {
-    dismiss () {
-      this.isDismissed = true
+    dismiss() {
+      this.isDismissed = true;
       this.$buefy.snackbar.open({
-        message: 'Dismissed',
-        queue: false
-      })
-    }
-  }
-}
+        message: "Dismissed",
+        queue: false,
+      });
+    },
+  },
+};
 </script>

@@ -15,38 +15,38 @@
 
 <script>
 export default {
-  name: 'CheckboxPicker',
+  name: "CheckboxPicker",
   props: {
     options: {
       type: Object,
-      default: null
+      default: null,
     },
     type: {
       type: String,
-      default: null
+      default: null,
     },
     value: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
-  data () {
+  data() {
     return {
-      newValue: []
-    }
+      newValue: [],
+    };
   },
   watch: {
-    value (newValue) {
-      this.newValue = newValue
-    }
+    value(newValue) {
+      this.newValue = newValue;
+    },
   },
-  created () {
-    this.newValue = this.value
+  created() {
+    this.newValue = this.value;
   },
   methods: {
-    input () {
-      this.$emit('input', this.newValue)
-    }
-  }
-}
+    input() {
+      this.$emit("input", this.newValue);
+    },
+  },
+};
 </script>

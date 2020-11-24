@@ -105,48 +105,48 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import NavBarMenu from '@/components/NavBarMenu'
-import UserAvatar from '@/components/UserAvatar'
+import { mapState } from "vuex";
+import NavBarMenu from "@/components/NavBarMenu";
+import UserAvatar from "@/components/UserAvatar";
 
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   components: {
     UserAvatar,
-    NavBarMenu
+    NavBarMenu,
   },
-  data () {
+  data() {
     return {
-      isMenuNavBarActive: false
-    }
+      isMenuNavBarActive: false,
+    };
   },
   computed: {
-    menuNavBarToggleIcon () {
-      return this.isMenuNavBarActive ? 'close' : 'dots-vertical'
+    menuNavBarToggleIcon() {
+      return this.isMenuNavBarActive ? "close" : "dots-vertical";
     },
-    menuToggleMobileIcon () {
-      return this.isAsideMobileExpanded ? 'backburger' : 'forwardburger'
+    menuToggleMobileIcon() {
+      return this.isAsideMobileExpanded ? "backburger" : "forwardburger";
     },
-    ...mapState(['isNavBarVisible', 'isAsideMobileExpanded', 'userName'])
+    ...mapState(["isNavBarVisible", "isAsideMobileExpanded", "userName"]),
   },
-  mounted () {
+  mounted() {
     this.$router.afterEach(() => {
-      this.isMenuNavBarActive = false
-    })
+      this.isMenuNavBarActive = false;
+    });
   },
   methods: {
-    menuToggleMobile () {
-      this.$store.commit('asideMobileStateToggle')
+    menuToggleMobile() {
+      this.$store.commit("asideMobileStateToggle");
     },
-    menuNavBarToggle () {
-      this.isMenuNavBarActive = !this.isMenuNavBarActive
+    menuNavBarToggle() {
+      this.isMenuNavBarActive = !this.isMenuNavBarActive;
     },
-    logout () {
+    logout() {
       this.$buefy.snackbar.open({
-        message: 'Log out clicked',
-        queue: false
-      })
-    }
-  }
-}
+        message: "Log out clicked",
+        queue: false,
+      });
+    },
+  },
+};
 </script>

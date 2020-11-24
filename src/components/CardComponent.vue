@@ -23,25 +23,25 @@
 
 <script>
 export default {
-  name: 'CardComponent',
+  name: "CardComponent",
   props: {
     title: {
       type: String,
-      default: null
+      default: null,
     },
     icon: {
       type: String,
-      default: null
+      default: null,
     },
     headerIcon: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
-    headerIconClick () {
-      this.$emit('header-icon-click')
-    }
-  }
-}
+    headerIconClick() {
+      this.$emit("header-icon-click");
+    },
+  },
+};
 </script>

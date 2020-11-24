@@ -30,12 +30,12 @@
 
 <script>
 export default {
-  name: 'TitleBar',
+  name: "TitleBar",
   props: {
     titleStack: {
       type: Array,
-      default: () => []
-    }
-  }
-}
+      default: () => [],
+    },
+  },
+};
 </script>

@@ -12,27 +12,27 @@
 
 <script>
 export default {
-  name: 'FilePicker',
+  name: "FilePicker",
   props: {
     accept: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
-  data () {
+  data() {
     return {
       file: null,
-      uploadPercent: 0
-    }
+      uploadPercent: 0,
+    };
   },
   computed: {
-    buttonLabel () {
-      return !this.file ? 'Pick a file' : 'Pick another file'
-    }
+    buttonLabel() {
+      return !this.file ? "Pick a file" : "Pick another file";
+    },
   },
   methods: {
-    upload (file) {
-      this.$emit('input', file)
+    upload(file) {
+      this.$emit("input", file);
       // Use this as an example for handling file uploads
       // let formData = new FormData()
       // formData.append('file', file)
@@ -54,11 +54,11 @@ export default {
       //     })
       //   })
     },
-    progressEvent (progressEvent) {
+    progressEvent(progressEvent) {
       this.uploadPercent = Math.round(
         (progressEvent.loaded * 100) / progressEvent.total
-      )
-    }
-  }
-}
+      );
+    },
+  },
+};
 </script>

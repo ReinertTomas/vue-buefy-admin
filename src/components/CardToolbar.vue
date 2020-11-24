@@ -17,12 +17,12 @@
 
 <script>
 export default {
-  name: 'CardToolbar',
+  name: "CardToolbar",
   props: {
     isMobile: {
       type: Boolean,
-      default: false
-    }
-  }
-}
+      default: false,
+    },
+  },
+};
 </script>

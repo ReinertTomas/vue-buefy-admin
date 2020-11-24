@@ -28,53 +28,53 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import FilePicker from '@/components/FilePicker'
-import CardComponent from '@/components/CardComponent'
+import { mapState } from "vuex";
+import FilePicker from "@/components/FilePicker";
+import CardComponent from "@/components/CardComponent";
 
 export default {
-  name: 'ProfileUpdateForm',
+  name: "ProfileUpdateForm",
   components: {
     CardComponent,
-    FilePicker
+    FilePicker,
   },
-  data () {
+  data() {
     return {
       isFileUploaded: false,
       isLoading: false,
       form: {
         name: null,
-        email: null
-      }
-    }
+        email: null,
+      },
+    };
   },
   computed: {
-    ...mapState(['userName', 'userEmail'])
+    ...mapState(["userName", "userEmail"]),
   },
   watch: {
-    userName (newValue) {
-      this.form.name = newValue
+    userName(newValue) {
+      this.form.name = newValue;
     },
-    userEmail (newValue) {
-      this.form.email = newValue
-    }
+    userEmail(newValue) {
+      this.form.email = newValue;
+    },
   },
-  mounted () {
-    this.form.name = this.userName
-    this.form.email = this.userEmail
+  mounted() {
+    this.form.name = this.userName;
+    this.form.email = this.userEmail;
   },
   methods: {
-    submit () {
-      this.isLoading = true
+    submit() {
+      this.isLoading = true;
       setTimeout(() => {
-        this.isLoading = false
-        this.$store.commit('user', this.form)
+        this.isLoading = false;
+        this.$store.commit("user", this.form);
         this.$buefy.snackbar.open({
-          message: 'Updated',
-          queue: false
-        })
-      }, 500)
-    }
-  }
-}
+          message: "Updated",
+          queue: false,
+        });
+      }, 500);
+    },
+  },
+};
 </script>
