@@ -106,8 +106,8 @@
 
 <script>
 import { mapState } from "vuex";
-import NavBarMenu from "@/components/NavBarMenu";
-import UserAvatar from "@/components/UserAvatar";
+import NavBarMenu from "@/components/navbar/NavBarMenu";
+import UserAvatar from "@/components/user/UserAvatar";
 
 export default {
   name: "NavBar",

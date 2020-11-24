@@ -33,7 +33,7 @@
 export default {
   name: "AsideMenuItem",
   components: {
-    AsideMenuList: () => import("@/components/AsideMenuList"),
+    AsideMenuList: () => import("@/components/aside/AsideMenuList"),
   },
   props: {
     item: {

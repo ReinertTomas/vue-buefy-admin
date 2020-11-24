@@ -9,9 +9,9 @@
 
 <script>
 // @ is an alias to /src
-import NavBar from "@/components/NavBar";
-import AsideMenu from "@/components/AsideMenu";
-import FooterBar from "@/components/FooterBar";
+import NavBar from "@/components/navbar/NavBar";
+import AsideMenu from "@/components/aside/AsideMenu";
+import FooterBar from "@/components/footer/FooterBar";
 
 export default {
   name: "Home",

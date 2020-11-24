@@ -126,12 +126,12 @@
 
 <script>
 import mapValues from "lodash/mapValues";
-import TitleBar from "@/components/TitleBar";
-import CardComponent from "@/components/CardComponent";
+import TitleBar from "@/components/title/TitleBar";
+import CardComponent from "@/components/card/CardComponent";
 import CheckboxPicker from "@/components/CheckboxPicker";
 import RadioPicker from "@/components/RadioPicker";
 import FilePicker from "@/components/FilePicker";
-import HeroBar from "@/components/HeroBar";
+import HeroBar from "@/components/hero/HeroBar";
 export default {
   name: "Forms",
   components: {

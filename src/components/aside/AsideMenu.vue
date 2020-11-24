@@ -21,8 +21,8 @@
 
 <script>
 import { mapState } from "vuex";
-import AsideTools from "@/components/AsideTools";
-import AsideMenuList from "@/components/AsideMenuList";
+import AsideTools from "@/components/aside/AsideTools";
+import AsideMenuList from "@/components/aside/AsideMenuList";
 
 export default {
   name: "AsideMenu",

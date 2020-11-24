@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AsideMenuItem from "@/components/AsideMenuItem";
+import AsideMenuItem from "@/components/aside/AsideMenuItem";
 
 export default {
   name: "AsideMenuList",
