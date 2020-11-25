@@ -17,13 +17,40 @@ const routes = [
   },
   {
     meta: {
+      title: "Users",
+    },
+    path: "/users",
+    name: "users",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "users" */ "../views/users/UsersList.vue"),
+  },
+  {
+    meta: {
+      title: "Users",
+    },
+    path: "/users/create",
+    name: "users-create",
+    component: () =>
+      import(/* webpackChunkName: "tables" */ "../views/users/UsersCreate.vue"),
+  },
+  {
+    meta: {
+      title: "Users",
+    },
+    path: "/users/edit/:id",
+    name: "users-edit",
+    component: () =>
+      import(/* webpackChunkName: "tables" */ "../views/users/UsersEdit.vue"),
+  },
+  {
+    meta: {
       title: "Tables",
     },
     path: "/tables",
     name: "tables",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "tables" */ "../views/Tables.vue"),
   },

@@ -30,6 +30,11 @@ export default {
             icon: "desktop-mac",
             label: "Dashboard",
           },
+          {
+            to: "/users",
+            icon: "account-group",
+            label: "Users",
+          },
         ],
         "Examples",
         [
