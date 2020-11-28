@@ -119,13 +119,13 @@
 import axios from "axios";
 import dayjs from "dayjs";
 import find from "lodash/find";
-import TitleBar from "@/components/title/TitleBar";
-import HeroBar from "@/components/hero/HeroBar";
-import Tiles from "@/components/Tiles";
-import CardComponent from "@/components/card/CardComponent";
-import FilePicker from "@/components/FilePicker";
+import TitleBar from "@/components/layout/TheTitle";
+import HeroBar from "@/components/layout/TheHero";
+import Tiles from "@/components/ui/Tiles";
+import CardComponent from "@/components/ui/CardComponent";
+import FilePicker from "@/components/ui/form/FilePicker";
 import UserAvatar from "@/components/user/UserAvatar";
-import Notification from "@/components/notification/Notification";
+import Notification from "@/components/ui/Notification";
 
 export default {
   name: "ClientForm",

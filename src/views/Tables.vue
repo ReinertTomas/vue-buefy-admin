@@ -59,11 +59,11 @@
 </template>
 
 <script>
-import Notification from "@/components/notification/Notification";
+import Notification from "@/components/ui/Notification";
 import ClientsTableSample from "@/components/ClientsTableSample";
-import CardComponent from "@/components/card/CardComponent";
-import TitleBar from "@/components/title/TitleBar";
-import HeroBar from "@/components/hero/HeroBar";
+import CardComponent from "@/components/ui/CardComponent";
+import TitleBar from "@/components/layout/TheTitle";
+import HeroBar from "@/components/layout/TheHero";
 export default {
   name: "Tables",
   components: {

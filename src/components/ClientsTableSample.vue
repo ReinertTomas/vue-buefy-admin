@@ -97,7 +97,7 @@
 
 <script>
 import axios from "axios";
-import ModalBox from "@/components/modal/ModalBox";
+import ModalBox from "@/components/ui/ModalBox";
 
 export default {
   name: "ClientsTableSample",

@@ -2,7 +2,7 @@
   <div>
     <title-bar :titleStack="titleStack" />
     <hero-bar>
-      Edit
+      Create
     </hero-bar>
     <section class="section is-main-section">
       <div class="container is-max-desktop">
@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import TitleBar from "@/components/title/TitleBar.vue";
-import HeroBar from "@/components/hero/HeroBar.vue";
-import Tiles from "@/components/Tiles";
+import TitleBar from "@/components/layout/TheTitle.vue";
+import HeroBar from "@/components/layout/TheHero.vue";
+import Tiles from "@/components/ui/Tiles";
 import ProfileUpdateForm from "@/components/user/ProfileUpdateForm";
 
 export default {
-  name: "UsersEdit",
+  name: "UsersCreate",
   components: {
     TitleBar,
     HeroBar,

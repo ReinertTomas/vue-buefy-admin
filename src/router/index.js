@@ -21,29 +21,25 @@ const routes = [
     },
     path: "/users",
     name: "users",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "users" */ "../views/users/UsersList.vue"),
-  },
-  {
-    meta: {
-      title: "Users",
-    },
-    path: "/users/create",
-    name: "users-create",
-    component: () =>
-      import(/* webpackChunkName: "tables" */ "../views/users/UsersCreate.vue"),
-  },
-  {
-    meta: {
-      title: "Users",
-    },
-    path: "/users/edit/:id",
-    name: "users-edit",
-    component: () =>
-      import(/* webpackChunkName: "tables" */ "../views/users/UsersEdit.vue"),
+    component: () => import("@/views/user/UserList.vue"),
+    children: [
+      {
+        meta: {
+          title: "User Create",
+        },
+        path: "/create",
+        name: "users-create",
+        component: () => import("@/views/user/UserCreate.vue"),
+      },
+      {
+        meta: {
+          title: "User Edit",
+        },
+        path: "/edit/:id",
+        name: "users-edit",
+        component: () => import("@/views/user/UserEdit.vue"),
+      },
+    ],
   },
   {
     meta: {
@@ -52,7 +48,7 @@ const routes = [
     path: "/tables",
     name: "tables",
     component: () =>
-      import(/* webpackChunkName: "tables" */ "../views/Tables.vue"),
+      import(/* webpackChunkName: "tables" */ "@/views/Tables.vue"),
   },
   {
     meta: {
@@ -61,7 +57,7 @@ const routes = [
     path: "/forms",
     name: "forms",
     component: () =>
-      import(/* webpackChunkName: "forms" */ "../views/Forms.vue"),
+      import(/* webpackChunkName: "forms" */ "@/views/Forms.vue"),
   },
   {
     meta: {
@@ -70,7 +66,7 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: () =>
-      import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
+      import(/* webpackChunkName: "profile" */ "@/views/Profile.vue"),
   },
   {
     meta: {
@@ -79,7 +75,7 @@ const routes = [
     path: "/client/new",
     name: "client.new",
     component: () =>
-      import(/* webpackChunkName: "client-form" */ "../views/ClientForm.vue"),
+      import(/* webpackChunkName: "client-form" */ "@/views/ClientForm.vue"),
   },
   {
     meta: {
@@ -88,7 +84,7 @@ const routes = [
     path: "/client/:id",
     name: "client.edit",
     component: () =>
-      import(/* webpackChunkName: "client-form" */ "../views/ClientForm.vue"),
+      import(/* webpackChunkName: "client-form" */ "@/views/ClientForm.vue"),
     props: true,
   },
 ];

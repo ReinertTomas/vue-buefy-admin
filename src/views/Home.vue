@@ -41,11 +41,11 @@
 </template>
 
 <script>
-import TitleBar from "@/components/title/TitleBar";
-import HeroBar from "@/components/hero/HeroBar";
-import Tiles from "@/components/Tiles";
-import CardWidget from "@/components/card/CardWidget";
-import CardComponent from "@/components/card/CardComponent";
+import TitleBar from "@/components/layout/TheTitle";
+import HeroBar from "@/components/layout/TheHero";
+import Tiles from "@/components/ui/Tiles";
+import CardWidget from "@/components/ui/CardWidget";
+import CardComponent from "@/components/ui/CardComponent";
 import ClientsTableSample from "@/components/ClientsTableSample";
 
 export default {

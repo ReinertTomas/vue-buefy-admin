@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import TitleBar from "@/components/title/TitleBar.vue";
-import HeroBar from "@/components/hero/HeroBar.vue";
+import TitleBar from "@/components/layout/TheTitle.vue";
+import HeroBar from "@/components/layout/TheHero.vue";
 import ClientsTableSample from "@/components/ClientsTableSample";
-import CardComponent from "@/components/card/CardComponent";
+import CardComponent from "@/components/ui/CardComponent";
 export default {
   name: "UsersList",
   components: {
